@@ -1,38 +1,57 @@
-.App {
+.headlin {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scorecard {
+  display: block;
+  
+  margin: auto;
+ box-sizing: border-box;
+ width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 2);
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 20px;
+background-color: antiquewhite;
 }
+.btn{
+  padding: 4px;
+  display: inline;
+  margin: 10px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-inc{
+  background-color: green;
+ 
 }
-
-.App-link {
-  color: #61dafb;
+.btn-dec{
+  background-color: red;
+ 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scoreB{
+  text-align: center;
+}
+.scoreA{
+  text-align: center;
+}
+.TeamA{
+  text-align: center;
+}
+.TeamB{
+  text-align: center;
+}
+.Container{
+  border: 4px solid black;
+  width: 450px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: rgb(133, 238, 199);
+  
 }

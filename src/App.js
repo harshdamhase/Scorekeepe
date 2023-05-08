@@ -1,23 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { useState } from 'react'
+
 function App() {
+
+  const [scoreA, setScoreA] = useState(0);
+  const [scoreB, setScoreB] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Container'>
+      <h2 className='headlin'>Scored Board</h2>
+
+      <div className='scorecard'>
+        <h2 className='TeamA'>Team A</h2>
+        <h3 className='scoreA'>{scoreA}</h3>
+
+        <button className='btn btn-inc' onClick={() =>
+          setScoreA(scoreA + 1)
+        }>+</button>
+
+        <button className='btn btn-dec' onClick={() => {
+          if (scoreA === 0) {
+            alert("Score can't be negative")
+          }
+          else {
+            setScoreA(scoreA - 1)
+          }
+
+        }}>-</button>
+
+      </div>
+
+
+      <div className='scorecard'>
+        <h2 className='TeamB'> Team B</h2>
+        <h3 className='scoreB'>{scoreB}</h3>
+
+        <button className='btn btn-inc' onClick={() =>
+          setScoreB(scoreB + 1)
+        }>+</button>
+
+        <button className='btn btn-dec' onClick={() =>
+          setScoreB(scoreB - 1)
+        }>-</button>
+
+      </div>
     </div>
   );
 }
